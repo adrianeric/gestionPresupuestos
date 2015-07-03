@@ -8,6 +8,7 @@ class CreateContactos < ActiveRecord::Migration
         t.integer :cliente_id, :unsigned => true, :null => false
         t.integer :tratamiento_id, :unsigned => true, :null => false
         t.string :email, :null => true
+        t.column :habilitado, :boolean, default: true
 
         t.timestamps null: false
     end

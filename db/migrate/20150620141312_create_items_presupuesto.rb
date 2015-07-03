@@ -2,13 +2,16 @@ class CreateItemsPresupuesto < ActiveRecord::Migration
   def change
     create_table :items_presupuesto do |t|
 
-        t.integer :presupuesto_id, unsigned: true, null: false
-        t.text :descripcion, null: false
-        t.decimal :monto_unitario, precision: 19, scale: 2, unsigned: true
-        t.float :cantidad, unsigned: true
-        t.integer :unidad_medida_id, unsigned: true
-        t.float :plazo_entrega, unsigned: true, null: true
-        t.string :texto_plazo_entrega, limit: 100
+        t.column :presupuesto_id, :integer, unsigned: true, null: false
+        t.column :descripcion, :text, null: false
+        t.column :monto_unitario, :decimal, precision: 19, scale: 2, unsigned: true
+        t.column :cantidad, :float, unsigned: true
+        t.column :unidad_medida_id, :integer, unsigned: true
+        t.column :plazo_entrega, :float, unsigned: true, null: true
+        t.column :texto_plazo_entrega, :string, limit: 100
+        t.column :adjudicado, :boolean, default: false
+        t.column :peso_neto_total, :integer, unsigned: true, null: true
+        t.column :peso_bruto_total, :integer, unsigned: true, null: true
 
 
         t.timestamps null: false
