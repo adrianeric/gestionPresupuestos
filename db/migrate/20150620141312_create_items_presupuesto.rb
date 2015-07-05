@@ -14,8 +14,6 @@ class CreateItemsPresupuesto < ActiveRecord::Migration
         t.column :peso_bruto_total, :integer, unsigned: true, null: true
 
 
-        t.timestamps null: false
-
         t.index :presupuesto_id
 
     end
