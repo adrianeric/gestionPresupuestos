@@ -11,6 +11,7 @@ class CreatePresupuestos < ActiveRecord::Migration
         t.integer :forma_de_pago_id, :limit => 5, :null => false, :unsigned => true
         t.integer :user_id, :null => false, :unsigned => true
         t.integer :moneda_id, :unsigned => true, :null => false
+        t.integer :estado_presup_id, unsigned: true, null: false, default: 1
 
         t.index :numero
 
