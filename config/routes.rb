@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  #get 'home/index'
+
   resources :contactos
 
   resources :clientes
@@ -60,6 +62,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  #root to: "home#index"
+  root 'home#index'
 
 end
