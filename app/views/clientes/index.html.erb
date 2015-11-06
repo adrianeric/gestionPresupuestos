@@ -1,17 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lista de Clientes</h1>
+<h1>Clientes</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th> Id </th>
+      <th>Nombre Cliente</th>
+      <th>Identificador</th>
+      <th>Tipo Identif</th>
+      
     </tr>
   </thead>
 
   <tbody>
     <% @clientes.each do |cliente| %>
       <tr>
+        <td><%= cliente.id %></td>
         <td><%= cliente.nombre %></td>
         <td><%= cliente.valorIdentificador %></td>
         <td><%= cliente.tipoIdentificador %></td>
