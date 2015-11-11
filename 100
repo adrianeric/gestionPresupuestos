@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20151111022051_add_direccion2_to_cliente.rb

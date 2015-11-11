@@ -1,33 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Clientes</h1>
+<div class="conteiner">
+  <div class="col-md-6">
+  <h1>Clientes</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th> Id </th>
-      <th>Nombre Cliente</th>
-      <th>Identificador</th>
-      <th>Tipo Identif</th>
-      
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clientes.each do |cliente| %>
+  <table class="table-striped">
+    <thead>
       <tr>
-        <td><%= cliente.id %></td>
-        <td><%= cliente.nombre %></td>
-        <td><%= cliente.valorIdentificador %></td>
-        <td><%= cliente.tipoIdentificador %></td>
-        <td><%= link_to 'Ver', cliente %></td>
-        <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+        <th></th>
+        <th>Id</th>
+        <th>Nombre Cliente</th>
+        <th>Identificador</th>
+        <th>Tipo Identif</th>
+      
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @clientes.each do |cliente| %>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td><%= cliente.id %></td>
+          <td><%= cliente.nombre %></td>
+          <td><%= cliente.valorIdentificador %></td>
+          <td><%= cliente.tipoIdentificador %></td>
+          <td><%= link_to 'Ver', cliente %></td>
+          <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+          <td><%= link_to 'Eliminar', cliente, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'Nuevo Cliente', new_cliente_path %>
+  <br>
+
+  <%= link_to 'Nuevo Cliente', new_cliente_path %>
+
+  </div>
+</div>

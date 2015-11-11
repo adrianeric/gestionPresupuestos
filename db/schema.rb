@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150722015913) do
+ActiveRecord::Schema.define(version: 20151111022051) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -50,6 +50,10 @@ ActiveRecord::Schema.define(version: 20150722015913) do
     t.integer  "moneda_id",          limit: 4,   default: 1, null: false
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
+    t.string   "direccion2",         limit: 100
+    t.string   "provincia2",         limit: 50
+    t.string   "localidad2",         limit: 100
+    t.string   "codPostal2",         limit: 20
   end
 
   add_index "clientes", ["valorIdentificador"], name: "index_clientes_on_valorIdentificador", using: :btree
@@ -67,6 +71,9 @@ ActiveRecord::Schema.define(version: 20150722015913) do
     t.boolean  "habilitado",     limit: 1,   default: true
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
+    t.string   "celular",        limit: 20
+    t.string   "tel1",           limit: 20
+    t.string   "tel2",           limit: 20
   end
 
   create_table "esquemas_de_vencimiento", force: :cascade do |t|
